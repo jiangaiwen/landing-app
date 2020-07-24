@@ -16,73 +16,31 @@ export const NavDataSource = {
             name: 'item0',
             className: 'header3-item',
             children: {
-                href: '#',
+                href: '/',
                 children: [{
                     children: (
                         <span>
-                            <p>
-                                <Link to="/">首页</Link>
+                            <p>首页
                             </p>
                         </span>
                     ),
-                    name: 'text'
+                    name: 'home'
                 }]
-            },
-            // subItem: [{
-            //     name: 'sub0',
-            //     className: 'item-sub',
-            //     children: {
-            //         className: 'item-sub-item',
-            //         children: [{
-            //             name: 'image0',
-            //             className: 'item-image',
-            //             children:
-            //             'https://gw.alipayobjects.com/zos/rmsportal/ruHbkzzMKShUpDYMEmHM.svg',
-            //         }, {
-            //             name: 'title',
-            //             className: 'item-title',
-            //             children: 'Ant Design'
-            //         }, {
-            //             name: 'content',
-            //             className: 'item-content',
-            //             children: '企业级 UI 设计体系'
-            //         }]
-            //     }
-            // }, {
-            //     name: 'sub1',
-            //     className: 'item-sub',
-            //     children: {
-            //         className: 'item-sub-item',
-            //         children: [{
-            //             name: 'image0',
-            //             className: 'item-image',
-            //             children:
-            //             'https://gw.alipayobjects.com/zos/rmsportal/ruHbkzzMKShUpDYMEmHM.svg',
-            //         }, {
-            //             name: 'title',
-            //             className: 'item-title',
-            //             children: 'Ant Design'
-            //         }, {
-            //             name: 'content',
-            //             className: 'item-content',
-            //             children: '企业级 UI 设计体系'
-            //         }]
-            //     }
-            // }]
+            }
         }, {
             name: 'item1',
             className: 'header3-item',
             children: {
-                href: '#',
+                href: '/Product',
                 children: [{
                     children: (
                         <span>
                             <p>
-                                <Link to="/product">产品展示</Link>
+                                产品展示
                             </p>
                         </span>
                     ),
-                    name: 'text'
+                    name: 'Product'
                 }]
             }
         }, {

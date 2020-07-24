@@ -26,7 +26,7 @@ export const Banner30DataSource = {
         className: 'banner3-button',
         children: (
           <span>
-            <p>加入我们</p>
+            加入我们
           </span>
         ),
       },

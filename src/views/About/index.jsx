@@ -2,14 +2,12 @@
 /* eslint arrow-parens: 0 */
 import React from 'react';
 import { enquireScreen } from 'enquire-js';
-
-import Nav from '../../components/Nav';
 import Banner3 from './Banner3';
 import Teams0 from './Teams0';
 import Teams2 from './Teams2';
 import Contact0 from './Contact0';
 import Footer from '../../components/Footer';
-import { NavDataSource, FooterDataSource } from '../../utils/data.source';
+import { FooterDataSource } from '../../utils/data.source';
 import {
   Banner30DataSource,
   Teams00DataSource,
@@ -54,12 +52,6 @@ export default class Home extends React.Component {
 
   render() {
     const children = [
-      <Nav
-        id="Nav3_0"
-        key="Nav3_0"
-        dataSource={NavDataSource}
-        isMobile={this.state.isMobile}
-      />,
       <Banner3
         id="Banner3_0"
         key="Banner3_0"
