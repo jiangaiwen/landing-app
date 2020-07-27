@@ -2,6 +2,16 @@
 @import './assets/css/custom.less';
 @import './assets/css/content.less';
 
+.h64{
+  height: 64px;
+}
+
+.fixed{
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
 .App-header {
   background: #fff;
   width: 100%;
@@ -9,6 +19,9 @@
   box-shadow: 0 4px 6px fade(#000, 5);
   position: relative;
   top: 0;
+  padding: 0 50px;
+  color: rgba(0, 0, 0, 0.65);
+  line-height: 64px;
 
   .home-page {
     padding: 0 24px;
@@ -96,6 +109,107 @@
     }
   }
 }
+
+.App-footer-wrapper {
+  background: @template-bg-color;
+  overflow: hidden;
+  position: relative;
+  min-height: 360px;
+  color: @template-footer-text-color;
+  .footer {
+    .home-page {
+      padding: 64px 24px 80px;
+    }
+  }
+  .block {
+    padding: 0 32px;
+    .logo {
+      max-width: 180px;
+    }
+    .slogan {
+      font-size: 12px;
+      margin-top: -20px;
+    }
+    >h2 {
+      margin-bottom: 24px;
+      color: @template-text-color;
+      text-align: left;
+    }
+    a {
+      color: @template-footer-text-color;
+      margin-bottom: 12px;
+      float: left;
+      clear: both;
+      &:hover {
+        color: @primary-color;
+      }
+    }
+  }
+  .copyright-wrapper {
+    width: 100%;
+    border-top: 1px solid fade(@line-color, 10);
+    .home-page {
+      padding: 0 24px;
+      overflow: hidden;
+    }
+    .copyright {
+      height: 80px;
+      text-align: center;
+      line-height: 80px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer1 {
+    min-height: 550px;
+    &-wrapper {
+      .footer1 {
+        .home-page {
+          padding: 64px 24px 32px;
+        }
+      }
+    }
+    .logo {
+      margin: 0 auto 24px;
+    }
+    .block {
+      text-align: center;
+      margin-bottom: 32px;
+      padding: 0;
+    }
+    >ul {
+      width: 90%;
+      margin: 20px auto 0;
+      padding: 10px 0;
+      >li {
+        width: 100%;
+        h2 {
+          margin-bottom: 10px;
+        }
+        li {
+          display: inline-block;
+          margin-right: 10px;
+        }
+      }
+    }
+    .copyright {
+      &-wrapper {
+        .home-page {
+          padding: 0;
+          .copyright {
+            font-size: 12px;
+          }
+        }
+      }
+
+      span {
+        width: 90%;
+      }
+    }
+  }
+}
+
 
 @media screen and (max-width: 767px) {
   .App-header {

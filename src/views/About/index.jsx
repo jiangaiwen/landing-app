@@ -6,8 +6,8 @@ import Banner3 from './Banner3';
 import Teams0 from './Teams0';
 import Teams2 from './Teams2';
 import Contact0 from './Contact0';
-import Footer from '../../components/Footer';
-import { FooterDataSource } from '../../utils/data.source';
+// import Footer from '../../components/Footer';
+// import { FooterDataSource } from '../../utils/data.source';
 import {
   Banner30DataSource,
   Teams00DataSource,
@@ -76,12 +76,12 @@ export default class Home extends React.Component {
         dataSource={Contact00DataSource}
         isMobile={this.state.isMobile}
       />,
-      <Footer
-        id="Footer1_0"
-        key="Footer1_0"
-        dataSource={FooterDataSource}
-        isMobile={this.state.isMobile}
-      />,
+      // <Footer
+      //   id="Footer1_0"
+      //   key="Footer1_0"
+      //   dataSource={FooterDataSource}
+      //   isMobile={this.state.isMobile}
+      // />,
     ];
     return (
       <div
