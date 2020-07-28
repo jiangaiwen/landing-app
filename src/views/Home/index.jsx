@@ -2,12 +2,10 @@
 /* eslint arrow-parens: 0 */
 import React from 'react';
 import { enquireScreen } from 'enquire-js';
-import Banner2 from './Banner2';
+import Banner from './Banner';
 import Content0 from './Content0';
 import Content1 from './Content1';
 import Content3 from './Content3';
-// import Footer from '../../components/Footer';
-// import { FooterDataSource } from '../../utils/data.source';
 import {
   Banner20DataSource,
   Content00DataSource,
@@ -21,14 +19,11 @@ enquireScreen((b) => {
   isMobile = b;
 });
 
-const { location = {} } = typeof window !== 'undefined' ? window : {};
-
 export default class Home extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isMobile,
-      show: !location.port, // 如果不是 dva 2.0 请删除
+      isMobile
     };
   }
 
@@ -37,28 +32,11 @@ export default class Home extends React.Component {
     enquireScreen((b) => {
       this.setState({ isMobile: !!b });
     });
-    // dva 2.0 样式在组件渲染之后动态加载，导致滚动组件不生效；线上不影响；
-    /* 如果不是 dva 2.0 请删除 start */
-    if (location.port) {
-      // 样式 build 时间在 200-300ms 之间;
-      setTimeout(() => {
-        this.setState({
-          show: true,
-        });
-      }, 500);
-    }
-    /* 如果不是 dva 2.0 请删除 end */
   }
 
   render() {
     const children = [
-      // <Nav
-      //   id="Nav3_0"
-      //   key="Nav3_0"
-      //   dataSource={NavDataSource}
-      //   isMobile={this.state.isMobile}
-      // />,
-      <Banner2
+      <Banner
         id="Banner2_0"
         key="Banner2_0"
         dataSource={Banner20DataSource}
@@ -81,13 +59,7 @@ export default class Home extends React.Component {
         key="Content3_0"
         dataSource={Content30DataSource}
         isMobile={this.state.isMobile}
-      />,
-      // <Footer
-      //   id="Footer1_0"
-      //   key="Footer1_0"
-      //   dataSource={FooterDataSource}
-      //   isMobile={this.state.isMobile}
-      // />,
+      />
     ];
     return (
       <div
@@ -96,9 +68,7 @@ export default class Home extends React.Component {
           this.dom = d;
         }}
       >
-        {/* 如果不是 dva 2.0 替换成 {children} start */}
-        {this.state.show && children}
-        {/* 如果不是 dva 2.0 替换成 {children} end */}
+        {children}
       </div>
     );
   }
